@@ -1,0 +1,392 @@
+*{
+    list-style: none;
+}
+.txt{font-family:'Noto Serif TC', serif!important;}
+.ttxt{font-family: 'Noto Sans TC', sans-serif;}
+
+html,body{
+    width:100%;
+    list-style: none;
+}
+body{
+    position: relative;
+}
+
+/*頭頭頭頭頭頭頭頭頭頭*/
+header{
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+.head{
+    width:100%;
+    height:700px;
+}
+.head .head_vdo{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.head .head_txt{
+    width:40%;
+    max-width: 400px;
+    min-width: 300px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+.head_txt img{
+    width: 100%;
+}
+.black{
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.header{
+    background-color: rgba(251, 0, 0, 0.7);
+    width: 100%;
+    height:80px;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    transform: translateY(-100%);
+}
+.header_top{
+    width: 100%;
+    height:80px;
+    background-color: rgba(251, 0, 0, 0);
+    position: absolute;
+    top:0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+.header .logo, .header_top .logo{
+    margin:8px 20px 0 20px;
+}
+.header .logo img, .header_top .logo img{
+    width: 120px;
+}
+.nav{
+    display: flex;
+}
+.nav .fas, .nav .far{
+    color: white;
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+/*頭頭頭的側邊選單*/
+.aside{
+    height:100%;
+    width:100%;
+    background-color: black;
+    position: fixed;   /*釘在body*/
+    top:0;
+    right:-100%;
+    transition: .5s;
+    z-index: 120;
+}
+.aside.open{
+    transform: translateX(-100%);
+}
+.aside .aside_btn{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+.aside ul{
+    width:50%;
+    margin: auto;
+    padding-top: 100px;
+}
+.aside ul li{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+.aside ul li a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+/*swiper圖片跑馬燈*/
+.txt_1{
+    margin: 50px 0 0 50px;
+}
+.txt_1 h2{
+    font-weight: 500;
+    font-size: 2em;    
+    margin-top: 10px;
+}
+.txt_1 p{
+    width: 320px;
+    font-weight: 200;
+    font-size: 1.1em;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.swiper{
+    margin-left: 50px!important;
+    margin-top: 30px!important;
+}
+.swiper_item{
+    width:100%;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+.swiper_item img{
+    width:100%;
+}
+.swiper_item p{
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: rgb(184, 184, 184);
+    line-height: 20px;
+}
+.swiper-button-next{
+    padding-right: 30px;
+}
+.swiper-button-next, .swiper-button-prev{
+    color:white!important;
+}
+
+
+
+/*大圖區塊*/
+.sec_1, .sec_2, .sec_3, .sec_4, .sec_5{
+    margin-top: 100px;
+    width: 100%;
+}
+.bg_1, .bg_2, .bg_3, .bg_4, .bg_5{
+    width: 100%;
+    height:800px;
+}
+.bg_1{
+    background: url("../img/bg_1.png") scroll no-repeat center / cover;
+}
+.bg_2{
+    background: url("../img/bg_2.png") scroll no-repeat center / cover;
+}
+.bg_3{
+    background: url("../img/bg_3.png") scroll no-repeat center / cover;
+}
+.bg_4{
+    background: url("../img/bg_4.png") scroll no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg_5{
+    background: url("../img/bg_5.png") scroll no-repeat center / cover;
+}
+.txt_2, .txt_3, .txt_4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.txt_5{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 30px;
+}
+.txt_2, .txt_4, .txt_5{color: white;}
+.txt_3{color: gray;}
+.txt_2 h2, .txt_3 h2, .txt_4 h2{
+    font-weight: 500;
+    font-size: 2em;    
+    padding: 50px 0 15px 0;
+    position: relative;
+}
+.txt_2 hr, .txt_3 hr, .txt_4 hr{
+    width:320px;
+    border: 0;
+}
+.txt_5 hr{
+    border: 0;
+    width: 100%;
+    padding-top: 10px;
+
+}
+.txt_2 hr, .txt_4 hr, .txt_5 hr{border-bottom: .5px solid white;}
+.txt_3 hr{border-bottom: .5px solid gray;}
+.txt_2 p,.txt_3 p, .txt_4 p{
+    font-weight: 400;
+    font-size: 1.3em;
+    padding-top: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+.txt_3 .x{
+    padding-bottom: 20px;
+    opacity: .5;
+}
+.more_btn{
+    background: none;
+    border:none;
+    padding-top: 50px;
+}
+.more_btn img{
+    width: 100px;
+
+}
+
+
+/*表單區塊*/
+.item{
+    width: 80%;
+    height: 90%;
+    background-color: rgba(250, 235, 224,.9);
+    border: solid 6px white;
+    padding: 40px 60px;
+    box-sizing: border-box;
+}
+.item1, .item2{
+    width:100%;
+}
+.item2{
+    padding-top: 20px;
+}
+.item1 h2, .item2 h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.item1 hr, .item2 hr{
+    border:0;
+    border-bottom: solid 1px rgb(104, 98, 27);
+    margin: 20px 0;
+}
+.item1_txt h3{
+    font-size: 1.3em;
+    font-weight: 400;
+
+}
+.item1_txt p, .item2 form{
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 30px;
+}
+.item1_txt a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: rgb(104, 98, 27);
+    text-decoration-line: underline;
+}
+.form_wrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 20px 0;
+}
+.item1 button, .input_last{
+    background-color: rgb(104, 98, 27);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.item1 button i{
+    margin-right: 5px;
+}
+.item2 form{
+    line-height: 30px;
+    width: 100%;
+}
+.item2 .form_wrap2{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding: 2px;
+}
+.item2 .form_wrap3{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 2px;
+}
+.label_first, .label_last{
+    padding-right: 10px;
+}
+.item2 form .input_first{
+    border:none;
+    height: 30px;
+    border-radius: 5px;
+    flex-grow:1;
+}
+.item2 form select{
+    border:none;
+    height: 80px;    
+    border-radius: 5px;
+    appearance: none;
+    flex-grow:1;
+
+}
+.item2 form optgroup{
+    padding: 10px;
+    font-size: 1.1em;
+    appearance: none;
+    box-sizing: border-box;
+}
+.item2 form optgroup option:hover{
+    appearance: none;
+    background-color: rgb(104, 98, 27);
+    color: white;
+}
+.item2 form optgroup option:checked{
+    box-shadow: 0 0 0 100px rgb(82, 76, 20) inset;
+}
+
+
+
+/*基本資料*/
+.item_info{
+    width:80%;
+    margin: auto;
+}
+.item_info .txt_5 h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.logo_info{
+    width:50%;
+    margin: auto;
+    padding: 90px 0 30px 0;
+}
+.logo_info img{
+    width: 100%;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    color: rgb(216, 216, 216);
+    font-size: 10px;
+    padding-top: 50px;
+}
+
+
+
+
+
